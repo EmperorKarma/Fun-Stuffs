@@ -21,26 +21,26 @@ X_Poly = Poly_reg.fit_transform(X)
 Poly_reg_2 = LinearRegression()
 Poly_reg_2.fit(X_Poly , Y)
 
-'''Visualizing The Linear Regression
+'''Visualizing The Linear Regression'''
 plt.scatter(X , Y , color = 'red')
 plt.plot(X , Lin_reg.predict(X) ,  color = 'blue')
 plt.title("Truth Or Bluff (Linear Regression)")
 plt.xlabel('Position Level')
 plt.ylabel("Salary")
-plt.show()'''
+plt.show()
 
-'''Visualizing The Polynomial Regression
+'''Visualizing The Polynomial Regression'''
 plt.scatter(X, y, color = 'red')
 plt.plot(X, lin_reg_2.predict(poly_reg.fit_transform(X)), color = 'blue')
 plt.title('Truth or Bluff (Polynomial Regression)')
 plt.xlabel('Position level')
 plt.ylabel('Salary')
-plt.show()'''
+plt.show()
 
 
 
 
-'''Visuallizing The Polynomial Regression In Smooth Curve
+'''Visuallizing The Polynomial Regression In Smooth Curve'''
 X_Grid = np.arange(min(X), max(X) ,0.1)
 X_Grid = X_Grid.reshape(len(X_Grid),1)
 plt.scatter(X , Y , color = 'red')
@@ -48,11 +48,11 @@ plt.plot(X_Grid , Poly_reg_2.predict( Poly_reg.fit_transform(X_Grid)) ,  color =
 plt.title("Truth Or Bluff (Polynomial Regression)")
 plt.xlabel('Position Level')
 plt.ylabel("Salary")
-plt.show()'''
+plt.show()
 
 '''Predecting a New Results In Linear Regression'''
-#Predict_Lin = Lin_reg.predict([[6.5]])
-#print(Predict_Lin)
+Predict_Lin = Lin_reg.predict([[6.5]])
+print(Predict_Lin)
 
 '''Predecting a New Results In Polynomial Regression'''
 Predict_Poly = Poly_reg_2.predict(Poly_reg.fit_transform([[6.5]]))
