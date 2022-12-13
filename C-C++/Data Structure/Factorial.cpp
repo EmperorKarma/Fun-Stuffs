@@ -11,7 +11,7 @@ int Factorial(int x)
         Multiply = Multiply*temp;
     }
 
-    cout<<Multiply;
+    cout<<"Factorial Of a Number "<<x<<" is : "<<Multiply;
 
 
 }
